@@ -11,6 +11,10 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'uid',
+    loadChildren: () => import('./display/display.module').then( m => m.DisplayPageModule)
+  },
 ];
 
 @NgModule({
